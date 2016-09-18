@@ -11,7 +11,7 @@ try:
         elif sys.version_info >= (2, 0):
             from ujson import *
     else:
-        raise RuntimeError("You are running an unsupported implementation of Python.")
+        raise ImportError("You are running an unsupported implementation of Python.")
 except ImportError:
     if sys.version_info >= (3, 0):
         raise ImportError("Optimal speed not reached."
@@ -20,7 +20,7 @@ except ImportError:
         raise ImportError("Optimal speed not reached."
                           "ujson is required.")
     else:
-        raise RuntimeError("This should never happen.")
+        raise ImportError("This should never happen.")
 
 del platform
 del sys
