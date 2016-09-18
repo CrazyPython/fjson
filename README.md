@@ -1,2 +1,2 @@
 # json-final
-The last JSON library.
+fjson figures out which json library is the fastest for you.
